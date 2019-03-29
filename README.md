@@ -69,11 +69,13 @@ The `<Layout>` component renders the tabsets and splitters, it takes the followi
 | ------------- |:-------------:| -----|
 | model    | required | the layout model  |
 | factory      | required | a factory function for creating React components |
+| tabMenu      | optional | a function for creating React components like a mini tab on the right side|
 | onAction | optional     |  function called whenever the layout generates an action to update the model (allows for intercepting actions before they are dispatched to the model, for example, asking the user to confirm a tab close) |
 | onRenderTab | optional     |  function called when rendering a tab, allows leading (icon) and content sections to be customized |
 | onRenderTabSet | optional     |  function called when rendering a tabset, allows header and buttons to be customized |
 | onModelChange | optional     |  function called when model has changed  |
 | classNameMapper | optional     |  function called with default css class name, return value is class name that will be used. Mainly for use with css modules.|
+
 
 The model is tree of Node objects that define the structure of the layout.
 
@@ -289,6 +291,7 @@ Attributes allowed in the 'global' element
 | tabSetEnableMaximize | true | |
 | tabSetClassNameTabStrip | null | |
 | tabSetClassNameHeader | null | |
+| tabSetEnableMenu | false | |
 | tabSetEnableTabStrip | true | |
 | tabSetHeaderHeight | 20 | |
 | tabSetTabStripHeight | 20 | |
